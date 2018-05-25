@@ -12,6 +12,8 @@ import com.blogspot.toomuchcoding.person.Person;
 
 public class MeanTaxFactorCalculatorTest {
 	
+//	To set a different default answer without annotations, you have to use the overloaded
+//	Mockito.mock(Class<T> classToMock, Answer defaultAnswer) static method.
 	TaxService taxService = mock(TaxService.class, new ThrowsExceptionClass(IllegalStateException.class));
 
 	MeanTaxFactorCalculator systemUnderTest = new MeanTaxFactorCalculator(taxService);
